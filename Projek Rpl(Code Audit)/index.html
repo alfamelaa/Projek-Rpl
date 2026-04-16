@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Catatan Keuangan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Catatan Keuangan Pribadi</h1>
+        
+        <div class="form">
+            <h2>Tambah Pengeluaran atau Pendapatan</h2>
+            <form id="keuangan-form">
+                <label for="jenis">Jenis (Pengeluaran/Pendapatan):</label>
+                <select id="jenis" name="jenis" required>
+                    <option value="pengeluaran">Pengeluaran</option>
+                    <option value="pendapatan">Pendapatan</option>
+                </select>
+
+                <label for="deskripsi">Deskripsi:</label>
+                <input type="text" id="deskripsi" name="deskripsi" required>
+
+                <label for="jumlah">Jumlah:</label>
+                <input type="number" id="jumlah" name="jumlah" required>
+
+                <button type="submit">Tambahkan</button>
+            </form>
+        </div>
+
+        <div id="list-keuangan">
+            <h2>Daftar Keuangan</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Jenis</th>
+                        <th>Deskripsi</th>
+                        <th>Jumlah</th>
+                    </tr>
+                </thead>
+                <tbody id="daftar-keuangan">
+                    <!-- Data pengeluaran/pendapatan akan ditambahkan di sini -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td><strong>Total Pengeluaran:</strong></td>
+                        <td colspan="2" id="total-pengeluaran">Rp 0</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total Pendapatan:</strong></td>
+                        <td colspan="2" id="total-pendapatan">Rp 0</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Total Keuangan:</strong></td>
+                        <td colspan="2" id="total-keuangan">Rp 0</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
